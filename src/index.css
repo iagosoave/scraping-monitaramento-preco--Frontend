@@ -3,7 +3,6 @@
 @theme {
   --font-family-sans: 'Inter', sans-serif;
   
-  /* Paleta azul escuro minimalista */
   --color-navy-50: #f0f4f8;
   --color-navy-100: #d9e2ec;
   --color-navy-200: #bcccdc;
@@ -17,8 +16,21 @@
   --color-navy-950: #0a1929;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--font-family-sans);
   background-color: var(--color-navy-950);
   color: var(--color-navy-100);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@media (min-width: 480px) {
+  .xs\:inline {
+    display: inline !important;
+  }
 }
