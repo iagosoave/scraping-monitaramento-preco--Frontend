@@ -21,9 +21,7 @@ function Header({ onAddClick }) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-            </div>
+            
             <div>
               <h1 className="text-lg sm:text-xl font-semibold text-white">PriceWatch</h1>
               <p className="text-xs sm:text-sm text-navy-400 hidden sm:block">monitoramento de precos</p>
