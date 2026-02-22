@@ -1,4 +1,4 @@
-# PriceWatch - Frontend
+# Frontend
 
 Interface React para o sistema de monitoramento de preços.
 
