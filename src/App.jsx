@@ -66,7 +66,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-gray-50">
       <Header onAddClick={() => setShowModal(true)} />
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">

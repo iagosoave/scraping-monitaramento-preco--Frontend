@@ -35,55 +35,55 @@ function ProductCard({ product, onScrape, onHistory, onDelete, scraping }) {
   const isLoading = scraping === product.id
 
   return (
-    <div className="bg-navy-900 border border-navy-800 rounded-xl p-4 sm:p-5 hover:border-navy-700 transition-colors">
+    <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 hover:border-gray-300 transition-colors">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
         <div className="flex-1 min-w-0">
-          <h3 className="text-white font-medium mb-1 truncate text-sm sm:text-base">
+          <h3 className="text-gray-900 font-medium mb-1 truncate text-sm sm:text-base">
             {product.name}
           </h3>
           <a
             href={product.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs sm:text-sm text-navy-400 hover:text-emerald-400 flex items-center gap-1 transition-colors"
+            className="text-xs sm:text-sm text-gray-400 hover:text-emerald-600 flex items-center gap-1 transition-colors"
           >
             <span className="truncate">{getDomain(product.url)}</span>
             <ExternalLink className="w-3 h-3 flex-shrink-0" />
           </a>
         </div>
-        
+
         <div className="flex items-center sm:items-end justify-between sm:justify-end sm:flex-col gap-2">
           <div className="flex items-center gap-2">
-            <span className="text-xl sm:text-2xl font-semibold text-white">
+            <span className="text-xl sm:text-2xl font-semibold text-gray-900">
               {formatPrice(product.last_price)}
             </span>
-            {trend === 'up' && <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />}
-            {trend === 'down' && <TrendingDown className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />}
-            {trend === 'stable' && <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-navy-400" />}
+            {trend === 'up' && <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" />}
+            {trend === 'down' && <TrendingDown className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />}
+            {trend === 'stable' && <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />}
           </div>
-          <p className="text-xs text-navy-500">{formatDate(product.last_checked)}</p>
+          <p className="text-xs text-gray-400">{formatDate(product.last_checked)}</p>
         </div>
       </div>
 
-      <div className="flex items-center gap-1 sm:gap-2 mt-4 pt-4 border-t border-navy-800">
+      <div className="flex items-center gap-1 sm:gap-2 mt-4 pt-4 border-t border-gray-200">
         <button
           onClick={() => onScrape(product.id)}
           disabled={isLoading}
-          className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-xs sm:text-sm text-emerald-400 hover:text-emerald-300 hover:bg-navy-800 rounded-lg transition-colors disabled:opacity-50"
+          className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors disabled:opacity-50"
         >
           <RefreshCw className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${isLoading ? 'animate-spin' : ''}`} />
           <span className="hidden xs:inline">{isLoading ? 'Atualizando...' : 'Atualizar'}</span>
         </button>
         <button
           onClick={() => onHistory(product)}
-          className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-xs sm:text-sm text-emerald-400 hover:text-emerald-300 hover:bg-navy-800 rounded-lg transition-colors"
+          className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors"
         >
           <History className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           <span className="hidden xs:inline">Histórico</span>
         </button>
         <button
           onClick={() => onDelete(product.id)}
-          className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-xs sm:text-sm text-red-400 hover:text-red-300 hover:bg-navy-800 rounded-lg transition-colors ml-auto"
+          className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 text-xs sm:text-sm text-red-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors ml-auto"
         >
           <Trash2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           <span className="hidden sm:inline">Excluir</span>
