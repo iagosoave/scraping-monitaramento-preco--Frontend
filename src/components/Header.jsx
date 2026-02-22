@@ -5,7 +5,7 @@ function Header({ onAddClick }) {
     <>
       <div className="bg-amber-50 border-b border-amber-200 text-amber-800 text-xs sm:text-sm text-center px-4 py-2">
         Para testes utilize links de sites como{' '}
-        <strong>Kabum</strong>, <strong>Trocafone</strong> e <strong>Dafiti</strong>.{' '}
+        <strong>kabum</strong>, <strong>trocafone</strong> e <strong>dafiti</strong>.{' '}
         <a
           href="https://github.com/iagosoave/scraping-monitaramento-preco-Backend"
           target="_blank"
